@@ -33,3 +33,6 @@ def buffon2(n):
   plt.grid()
   plt.plot(lx[k-100:k], ly[k-100:k], color="blue", markersize=1)
   plt.show()
+  
+  buffon2(1000000)
+  
