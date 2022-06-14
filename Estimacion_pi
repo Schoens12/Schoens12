@@ -1,0 +1,86 @@
+from cmath import sqrt
+import random as rd
+
+print('Ejercicio 1, volado\na)')
+
+x = rd.random()
+
+if x < .5:
+    print('El resultado es sol')
+else:
+    print('El resultado es aguila')
+
+print('b) ')
+
+s=0
+a=0
+
+for i in range(1000):
+
+    x = rd.random()
+
+    if x < .5:
+        s+=1
+    else:
+        a+=1
+
+print('La probabilidad de que caiga sol en un volado es de ' + str((s/1000)*100) + '%')
+
+print('Ejercicio 2, sorteo\na)')
+
+x = rd.randint(1,5)
+
+if x == 1:
+    print('El resultado fue blanco')
+
+elif x==2:
+    print('El resultado fue negro')
+
+elif x==3:
+    print('El resultado fue rojo')
+
+elif x==4:
+    print('El resultado fue azul')
+
+elif x==5:
+    print('El resultado fue verde')
+
+print('b)')
+
+for i in range(5):
+
+    x = rd.randint(1,5)
+
+    if x == 1:
+
+        print('El resultado fue blanco')
+    
+    elif x==2:
+        print('El resultado fue negro')
+    
+    elif x==3:
+        print('El resultado fue rojo')
+
+    elif x==4:
+        print('El resultado fue azul')
+
+    elif x==5:
+        print('El resultado fue verde')
+
+print('Tarea 1, pi\na)')
+
+af=0
+ad=0
+
+for i in range(10000):
+
+    x = rd.random()
+    y = rd.random()
+
+    if pow(1-x**2,0.5) > y:
+
+        ad+=1
+
+pi = 4*(ad/10000)
+
+print('Pi = ' + str(pi))
