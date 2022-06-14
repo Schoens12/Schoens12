@@ -1,0 +1,22 @@
+from random import random, gauss
+from scipy import stats
+import matplotlib.pyplot as plt
+def normunif(n):
+    U=[]
+    for j in range(n):
+      ui=0
+      for i in range(12):
+        ui += random()
+        U.append(ui - 6)
+    return U
+
+uu=normunif(10000)
+print(stats.kstest(uu, 'norm'))
+plt.hist(uu,density=1,color='grey',edgecolor='black')
+plt.show()
+nn=[]
+for j in range(10000):
+   nn.append(gauss(0,1))
+print(stats.kstest(nn, 'norm'))
+plt.hist(nn,density=1,color='grey',edgecolor='black')
+plt.show()
