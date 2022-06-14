@@ -1,0 +1,14 @@
+import random
+import numpy as np
+from math import sqrt,atan
+from statistics import mean, variance
+
+def f(z):
+return sqrt(atan(z))
+N=100000
+l=[]
+for i in range(N):
+u=random.random()
+l.append(f(u))
+print('La integral estimada es:',mean(l))
+print('Con una varianza de:',variance(l))
